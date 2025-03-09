@@ -23,6 +23,7 @@ const Navbar = () => {
           <Link to="/">Shop </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
+
         <li
           onClick={() => {
             setMenu("mens");
@@ -31,6 +32,7 @@ const Navbar = () => {
           <Link to="/mens">Men</Link>
           {menu === "mens" ? <hr /> : <></>}
         </li>
+
         <li
           onClick={() => {
             setMenu("womens");
@@ -39,6 +41,7 @@ const Navbar = () => {
           <Link to="/womens">Women </Link>
           {menu === "womens" ? <hr /> : <></>}
         </li>
+
         <li
           onClick={() => {
             setMenu("kids");
