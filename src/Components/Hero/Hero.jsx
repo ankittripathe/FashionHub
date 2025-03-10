@@ -7,23 +7,22 @@ import hero_image from "../Assets/hero_image.png";
 const Hero = () => {
   return (
     <div className="hero">
-      {/* left-side */}
       <div className="hero-left">
         <h2>NEEW ARRIVALS ONLY</h2>
-      </div>
 
-      <div>
-        <div className="hand-hand-icon">
-          <p>New</p>
-          <img src={hand_icon} alt="handIcon" />
+        <div>
+          <div className="hero-hand-icon">
+            <p>New</p>
+            <img src={hand_icon} alt="handIcon" />
+          </div>
+          <p>Collections</p>
+          <p>For everyone</p>
         </div>
-        <p>Collections</p>
-        <p>For everyone</p>
-      </div>
 
-      <div className="hero-latest-btn">
-        <div>Latest collection</div>
-        <img src={arrow_icon} alt="" />
+        <div className="hero-latest-btn">
+          <div>Latest collection</div>
+          <img src={arrow_icon} alt="" />
+        </div>
       </div>
 
       {/* right-side */}
