@@ -5,9 +5,9 @@ import App from "./App.jsx";
 import ShopContext from "./Context/ShopContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  // <StrictMode>
     <ShopContext>
       <App />
     </ShopContext>
-  </StrictMode>
+  // </StrictMode>
 );
