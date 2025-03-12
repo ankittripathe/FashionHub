@@ -11,9 +11,14 @@ const Item = (props) => {
       {/* Absolute Path (/product/${props.id}) ✅ */}
 
       <Link to={`/product/${props.id}`}>
-        <img src={props.image} alt="" />
+        {/* <img src={props.image} alt="" onClick={() => window.scrollTo(0, 0)}/> */}
+        <img
+          src={props.image}
+          alt=""
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        />
       </Link>
-      
+
       <p>{props.name}</p>
 
       <div className="item-prices">
