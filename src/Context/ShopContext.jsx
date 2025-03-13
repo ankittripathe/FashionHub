@@ -1,32 +1,13 @@
 import React, { createContext, useState } from "react";
 import all_product from "../Components/Assets/all_product";
 
-// const getDefaultCart = () => {
-//   let cart = {};
-//   for (let i = 0; i < all_product.length + 1; i++) {
-//     cart[i] = 0;
-//   }
-//   return cart;
-// };
-
-
-
-
-
 const getDefaultCart = () => {
-  const cart = {};
-  // Iterate over each product and set its quantity to 0
-  all_product.forEach((product) => {
-    cart[product.id] = 0; // Use product.id instead of index
-  });
+  let cart = {};
+  for (let i = 0; i < all_product.length + 1; i++) {
+    cart[i] = 0;
+  }
   return cart;
 };
-
-
-
-
-
-
 
 //(1) create context here
 const ShopContextCreated = createContext(null);
@@ -50,7 +31,7 @@ const ShopContext = (props) => {
     }));
   };
 
-  // Total cart amount
+  // Total Cart Amount
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
@@ -64,6 +45,17 @@ const ShopContext = (props) => {
     return totalAmount;
   };
 
+  // Total Cart Items
+  const getTotalCartItems = () => {
+    let totalItems = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        totalItems += cartItems[item];
+      }
+    }
+    return totalItems;
+  };
+
   //(2) contextValue Send
   const contextValue = {
     all_product,
@@ -71,6 +63,7 @@ const ShopContext = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    getTotalCartItems
   };
 
   return (
