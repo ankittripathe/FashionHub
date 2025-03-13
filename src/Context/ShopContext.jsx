@@ -21,7 +21,7 @@ const ShopContext = (props) => {
       ...prevCart,
       [itemId]: (prevCart[itemId] || 0) + 1, // Ensures first-time addition starts from 1
     }));
-    console.log("cartItems =", cartItems); // check 
+    // console.log("cartItems =", cartItems); // check 
   };
 
   const removeFromCart = (itemId) => {
