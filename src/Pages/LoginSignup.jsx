@@ -1,27 +1,25 @@
 import React from "react";
 import "./Styles/LoginSignup.css";
-import { useState } from "react";
+import { useForm } from "react-hook-form"; // rect-hook-form
 
 const LoginSignup = () => {
-  const [username, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [agreeTerms, setAgreeTerms] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    // console.log(`Username: ${username} Email: ${email} Password: ${password}`);
-    alert('form submitted')
+  const submitHandler = (data) => {
+    console.log(data);
+    alert(`Submitted by: ${data.UserName}`);
 
-    // Clear form fields after submission
-    setUserName("");
-    setEmail("");
-    setPassword("");
-    setAgreeTerms(false);
+    // Clear input fields after submission
+    reset();
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={handleSubmit(submitHandler)}>
       <div className="loginsignup">
         <div className="loginsignup-container">
           <h1>Sign Up</h1>
@@ -29,26 +27,35 @@ const LoginSignup = () => {
           <div className="loginsignup-fields">
             <input
               type="text"
-              value={username}
-              placeholder="Your Name"
-              onChange={(e) => setUserName(e.target.value)}
-              required   /* form validation */
+              placeholder="User Name"
+              {...register("UserName")}
             />
 
             <input
               type="email"
-              value={email}
               placeholder="Email Address"
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              {...register("Email", { required: true })}
             />
+            {errors.Email && <p>Email is required.</p>}
+
             <input
               type="password"
-              value={password}
               placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              {...register("Password", {
+                required: true,
+                minLength: {
+                  value: 6,
+                  message: "Min Length should be atleat 6",
+                },
+                maxLength: {
+                  value: 12,
+                  message: "Max length should be atmost 12",
+                },
+              })}
             />
+            {errors.Password && (
+              <p className="error-msg">{errors.Password.message}</p>
+            )}
           </div>
 
           <button>Continue</button>
@@ -57,12 +64,7 @@ const LoginSignup = () => {
           </p>
 
           <div className="loginsignup-agree">
-            <input
-              type="checkbox"
-              checked={agreeTerms}
-              onChange={(e) => setAgreeTerms(e.target.checked)}
-              required 
-            />
+            <input type="checkbox" required />
             <p>By Continuing, I agree to the terms of use & privacy policy.</p>
           </div>
         </div>
