@@ -31,7 +31,7 @@ const LoginSignup = () => {
               value={username}
               placeholder="Your Name"
               onChange={(e) => setUserName(e.target.value)}
-              required
+              required   /* form validation */
             />
 
             <input
@@ -60,7 +60,7 @@ const LoginSignup = () => {
               type="checkbox"
               checked={agreeTerms}
               onChange={(e) => setAgreeTerms(e.target.checked)}
-              required
+              required 
             />
             <p>By Continuing, I agree to the terms of use & privacy policy.</p>
           </div>
