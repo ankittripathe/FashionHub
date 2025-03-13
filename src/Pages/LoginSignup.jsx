@@ -10,7 +10,8 @@ const LoginSignup = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(`Username: ${username} Email: ${email} Password: ${password}`);
+    // console.log(`Username: ${username} Email: ${email} Password: ${password}`);
+    alert('form submitted')
 
     // Clear form fields after submission
     setUserName("");
