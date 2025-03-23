@@ -1,0 +1,238 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 75px;
+    box-shadow: 0 1px 3px -2px black;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+  }
+  
+  /* Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .nav-logo p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #171717;
+  }
+  
+  .nav-logo p span{
+    color: #d62e2e;
+  }
+  
+  .nav-logo img {
+    height: 50px;
+  }
+  
+  /* Navigation Menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 55px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+  
+  .nav-menu li hr {
+    border: none;
+    height: 3px;
+    width: 80%;
+    border-radius: 6px;
+    background-color:#d62e2e;
+  }
+  
+  /* Login & Cart */
+  .nav-login-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-login-cart button {
+    padding: 10px 45px;
+    font-size: 20px;
+    border: 1px solid #7a7a7a;
+    border-radius: 50px;
+    color: #515151;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .nav-login-cart button:active {
+    background: #f3f3f3;
+  }
+  
+  /* Cart Badge */
+  .nav-cart-count {
+    background-color:#d62e2e;
+    color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    margin-left: -52px;
+  }
+  
+  .nav-dropdown {
+    display: none;
+  }
+  
+  /* Responsiveness */
+  /* Desktop Size */
+  @media (max-width: 1280px) {
+    .navbar {
+      padding: 10px 60px;
+    }
+    .nav-logo img {
+      height: 45px;
+    }
+    .nav-logo p {
+      font-size: 28px;
+    }
+    .nav-menu {
+      gap: 32px;
+      font-size: 18px;
+    }
+    .nav-login-cart {
+      gap: 40px;
+    }
+    .nav-login-cart button {
+      padding: 9px 36px;
+      font-size: 16px;
+    }
+    .nav-cart-count {
+      font-size: 14px;
+      margin-left: -45px;
+    }
+  }
+  
+  /* Small Laptop */
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 10px 50px;
+    }
+    .nav-menu {
+      gap: 28px;
+      font-size: 16px;
+    }
+    .nav-login-cart button {
+      padding: 8px 25px;
+      font-size: 16px;
+    }
+    .nav-login-cart img {
+      width: 33px;
+    }
+    .nav-cart-count {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  /* Tablet Devices */
+  @media (max-width: 834px) {
+    .navbar {
+      padding: 10px 30px;
+    }
+    .nav-dropdown {
+      display: block;
+      width: 25px;
+      rotate: -90deg;
+      transition: 0.5s;
+    }
+    .nav-menu {
+      display: none;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      justify-content: center;
+      top: 55px;
+      gap: 70px;
+      height: 40px;
+    }
+    .nav-menu-visible {
+      display: flex;
+    }
+    .open {
+      transform: rotate(90deg);
+    }
+    .no-shadow {
+      box-shadow: none !important;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 484px) {
+    .navbar {
+      padding: 10px 2px;
+      gap: 0;
+    }
+    .nav-logo {
+      transform: scale(0.8);
+      gap: 0px;
+    }
+    .nav-logo p {
+      margin-top: 6px;
+    }
+    .nav-menu {
+      width: 100%;
+      gap: 35px;
+    }
+    .nav-menu-visible {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: auto;
+    }
+    .nav-login-cart {
+      transform: scale(0.8);
+      gap: 30px;
+      justify-content: center;
+    }
+    .nav-login-cart button {
+      padding: 8px 20px;
+    }
+  }
+  
+  
+  @media(max-width:360px){
+    .navbar {
+      padding: 10px 18px;
+      gap: 0;
+    }
+    .nav-logo p{
+      display: none;
+    }
+  
+    .nav-login-cart button{
+      margin-left: 28px;
+    }
+  
+  }
+  

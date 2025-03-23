@@ -1,0 +1,85 @@
+.descriptionBox {
+    margin: 40px 100px;
+  }
+  
+  .descriptionBox-navigator {
+    display: flex;
+  }
+  
+  .descriptionBox-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+    border: 1px solid #d0d0d0;
+  }
+  
+  .descriptionBox-nav-box.fade {
+    background: #fbfbfb;
+    color: #555;
+  }
+  
+  .descriptionBox-description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid #d0d0d0;
+    padding: 40px;
+    padding-bottom: 70px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .descriptionBox {
+      margin: 30px 50px;
+    }
+    .descriptionBox-nav-box {
+      width: 150px;
+      height: 60px;
+      font-size: 15px;
+    }
+    .descriptionBox-description {
+      padding: 30px;
+      padding-bottom: 50px;
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .descriptionBox {
+      margin: 20px 30px;
+    }
+    .descriptionBox-navigator {
+      flex-direction: column;
+    }
+    .descriptionBox-nav-box {
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+    }
+    .descriptionBox-description {
+      padding: 20px;
+      padding-bottom: 40px;
+      gap: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .descriptionBox {
+      margin: 30px 15px;
+    }
+    .descriptionBox-nav-box {
+      height: 45px;
+      font-size: 13px;
+    }
+    .descriptionBox-description {
+      padding: 15px;
+      padding-bottom: 30px;
+      gap: 10px;
+      font-size: 14px;
+    }
+  }
+  
