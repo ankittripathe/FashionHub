@@ -1,6 +1,0 @@
-@media (max-width: 600px) {
-  .swal-modal {
-    width: 80% !important; /* Reduce modal width */
-    max-width: 300px !important; /* Set max width */
-  }
-}
