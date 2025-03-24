@@ -1,0 +1,82 @@
+/* .descriptionbox{
+    margin: 120px 170px;
+}
+.descriptionbox-navigator{
+    display: flex;
+    gap:10px
+}
+.descriptionbox-navbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 150px;
+    height: 60px;
+    border: 1px solid #d0d0d0;
+}
+.descriptionbox-navbox.fade{
+      background: #fbfbfb;
+      color: #555;
+}
+.descriptionbox-description{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #d0d0d0;
+    padding: 48px;
+    padding-bottom: 70px;
+} */
+
+/* Base styles */
+.descriptionbox {
+  margin: 100px auto; /* Centering the description box horizontally */
+  max-width: 900px; /* Limiting the maximum width */
+}
+
+.descriptionbox-navigator {
+  display: flex;
+  gap: 10px;
+}
+
+.descriptionbox-navbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 150px;
+  height: 60px;
+  border: 1px solid #d0d0d0;
+}
+
+.descriptionbox-navbox.fade {
+  background: #fbfbfb;
+  color: #555;
+}
+
+.descriptionbox-description {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d0d0d0;
+  padding: 48px;
+  padding-bottom: 70px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1024px) {
+  .descriptionbox {
+    margin: 120px 10px; /* Adjusting margin for smaller screens */
+  }
+
+  .descriptionbox-description {
+    padding: 20px; /* Adjusting padding for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 500px) {
+  .descriptionbox-navbox {
+    width: 120px; /* Adjusting width of navigation boxes for smaller screens */
+    height: 50px; /* Adjusting height of navigation boxes for smaller screens */
+  }
+}
