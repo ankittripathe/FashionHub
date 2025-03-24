@@ -1,15 +1,3 @@
-/* 
-.bedcrum{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #5e5e5e;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 60px 170px;
-    text-transform: capitalize;
-} */
-
 .bedcrum {
   display: flex;
   align-items: center;
@@ -17,9 +5,9 @@
   color: #5e5e5e;
   font-size: 16px;
   font-weight: 500;
-  margin: 60px auto; /* Centering the breadcrumbs horizontally */
-  max-width: 900px; /* Limiting the maximum width */
-  padding: 0 20px; /* Adding padding for responsiveness */
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 0 20px;
   text-transform: capitalize;
 }
 
